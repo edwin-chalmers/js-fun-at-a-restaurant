@@ -31,9 +31,12 @@ function addIngredients(toppings, ingredients) {
 }
 
 
+
+// // // Not sure how to make it change in the second half
 function formatPrice(initialPrice) { 
   return `$${initialPrice}`;
 }
+
 
 
 // function decreasePrice() {
@@ -46,6 +49,7 @@ function formatPrice(initialPrice) {
 //     return decreasedPrice
 // }
 
+// // // Not sure if i did this the way it was intended
 function decreasePrice() {
   var newPrice = createMenuItem()
     newPrice.price = 6.00
@@ -53,12 +57,28 @@ function decreasePrice() {
     return decreasedPrice
  }
 
+
+// function createRecipe() {
+  
+// }
+
+// // // Not sure how to make it change in the second half
+function createRecipe(title, ingredients, menuItemType) {
+  return {
+    title: title,
+    ingredients: ingredients,
+    type: menuItemType
+  };
+}
+
+
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
   formatPrice,
   decreasePrice,
-  // createRecipe
+  createRecipe
 }
 
