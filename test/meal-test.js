@@ -96,6 +96,7 @@ describe("meal.js", function() {
 
       var formattedPrice = formatPrice(initialPrice);
       assert.equal(formattedPrice, "$10.99")
+      console.log(formattedPrice)
     });
 
     it("should add a dollar sign in front of a different price", function () {
@@ -105,6 +106,7 @@ describe("meal.js", function() {
 
       var formattedPrice = formatPrice(initialPrice);
       assert.equal(formattedPrice, "$5.99")
+      console.log(formattedPrice)
     });
   });
 

@@ -34,9 +34,8 @@ function addIngredients(toppings, ingredients) {
 
 // // // Not sure how to make it change in the second half
 function formatPrice(initialPrice) { 
-  return `$${initialPrice}`;
+  return `$${initialPrice}`
 }
-
 
 
 // function decreasePrice() {
