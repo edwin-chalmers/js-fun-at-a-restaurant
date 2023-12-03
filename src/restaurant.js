@@ -91,8 +91,7 @@ function removeMenuItem(pizzaRestaurant, itemName, menuType) {
 
 
 function checkForFood(restaurant, foodItem) {
-  var menuType = foodItem.type;
-  var menu = restaurant.menus[menuType]
+  var menu = restaurant.menus[foodItem.type]
 
   for (var i = 0; i < menu.length; i++) {
     if (menu[i].name === foodItem.name) {
