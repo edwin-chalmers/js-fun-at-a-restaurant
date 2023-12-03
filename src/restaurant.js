@@ -89,9 +89,13 @@ function removeMenuItem(pizzaRestaurant, itemName, menuType) {
 
 
 
+// // // Why is .type necessary for this code to work? 
+// // // Is it because they're bring categories by their type, 
+// // // and being putt into the arrays from createRestaurant.
 
 function checkForFood(restaurant, foodItem) {
   var menu = restaurant.menus[foodItem.type]
+
 
   for (var i = 0; i < menu.length; i++) {
     if (menu[i].name === foodItem.name) {
