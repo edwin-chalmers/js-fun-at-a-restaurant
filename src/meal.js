@@ -4,11 +4,11 @@ function nameMenuItem(food) {
 
 
 
-function createMenuItem() {
+function createMenuItem(name, price, type) {
   var menuItem = {
-    name: "Delicious French Toast",
-    price: 10.99,
-    type: "breakfast"
+    name, 
+    price,
+    type,
     }
     return menuItem
 }
@@ -16,12 +16,13 @@ function createMenuItem() {
 
 
 // // // Why did this one not work?
-// function addIngredients(toppings, ingredients) {
-//   if (ingredients.includes(toppings) = false) {
-//     ingredients.push(toppings)
-//   }
-//   return ingredients
-// }
+// This didn't work because im assinging the result of the includes method to false istead of comapring it
+function addIngredients(toppings, ingredients) {
+  if (ingredients.includes(toppings) = false) {
+    ingredients.push(toppings)
+  }
+  return ingredients
+}
 
 function addIngredients(toppings, ingredients) {
   if (!ingredients.includes(toppings)) {
@@ -34,6 +35,7 @@ function addIngredients(toppings, ingredients) {
 
 // // // Not sure how to make it change in the second half
 function formatPrice(initialPrice) { 
+  // console.log("initialPrice:", initialPrice)
   return `$${initialPrice}`
 }
 
@@ -61,7 +63,7 @@ function decreasePrice() {
   
 // }
 
-// // // Not sure how to make it change in the second half
+
 function createRecipe(title, ingredients, menuItemType) {
   return {
     title: title,

@@ -96,17 +96,18 @@ describe("meal.js", function() {
 
       var formattedPrice = formatPrice(initialPrice);
       assert.equal(formattedPrice, "$10.99")
-      console.log(formattedPrice)
+      // console.log(formattedPrice)
     });
 
     it("should add a dollar sign in front of a different price", function () {
       var menuItemName = nameMenuItem("Carrot Cake");
       var menuItem = createMenuItem(menuItemName, 5.99, "dessert");
+      // console.log("menu item:", menuItem)
       var initialPrice = menuItem.price;
 
       var formattedPrice = formatPrice(initialPrice);
       assert.equal(formattedPrice, "$5.99")
-      console.log(formattedPrice)
+      // console.log(formattedPrice)
     });
   });
 

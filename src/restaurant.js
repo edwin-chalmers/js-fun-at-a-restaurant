@@ -1,26 +1,27 @@
-// function createRestaurant(restaurantName) { 
-//   var place ={
-//     name: `${restaurantName}`,
-//     menus: {
-//       breakfast: [],
-//       lunch: [],
-//       dinner: []
-//     }  
-//   }; 
-// } return place
-
-
-// // // Why does this code work without a declared varible but the code withdeclared varibles doesn;t
 function createRestaurant(restaurantName) { 
-  return {
-    name: `${restaurantName}`,
+  var place = {
+    name: restaurantName,
     menus: {
       breakfast: [],
       lunch: [],
       dinner: []
-    }    
-  };   
-}   
+    }  
+  } 
+  return place
+} 
+
+
+// // // Why does this code work without a declared varible but the code withdeclared varibles doesn;t
+// function createRestaurant(restaurantName) { 
+//   return {
+//     name: restaurantName,
+//     menus: {
+//       breakfast: [],
+//       lunch: [],
+//       dinner: []
+//     }    
+//   };   
+// }   
 
 
 // function addMenuItem(pizzaRestaurant, pizzaType) {
@@ -67,7 +68,6 @@ function addMenuItem(pizzaRestaurant, pizzaType) {
 
 
 
-
 function removeMenuItem(pizzaRestaurant, itemName, menuType) {
   var menu = pizzaRestaurant.menus[menuType];
   var itemIndex = -1;
@@ -88,14 +88,23 @@ function removeMenuItem(pizzaRestaurant, itemName, menuType) {
 
 
 
-// function removeMenuItem(pizzaRestaurant, pizzaType, menuType) {
-//   var menuName = pizzaRestaurant.menus[menuType]
-//   pizzaRestaurant.menus[pizzaType.name].
-// }
 
-// function addMenuItem(pizzaRestaurant, pizzaType) {
-//   pizzaRestaurant.menus[pizzaType.type].push(pizzaType)
-// }
+
+function checkForFood(restaurant, foodItem) {
+  var menuType = foodItem.type;
+  var menu = restaurant.menus[menuType]
+
+  for (var i = 0; i < menu.length; i++) {
+    if (menu[i].name === foodItem.name) {
+      return `Yes, we're serving ${foodItem.name} today!`;
+    }
+  }
+
+return `Sorry, we aren't serving ${foodItem.name} today.`;
+}
+
+
+
 
 
 
@@ -104,5 +113,5 @@ module.exports = {
   createRestaurant, 
   addMenuItem,
   removeMenuItem,
-  // checkForFood
+  checkForFood
 }
